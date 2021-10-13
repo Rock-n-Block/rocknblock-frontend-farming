@@ -1,11 +1,12 @@
 import {
-    FunctionalComponent, h
+    FunctionalComponent, h, Fragment
 } from 'preact';
 import { useState } from 'preact/hooks';
 
 import {
-    ContactUs, UpButton, TelegramWidget
+    ContactUs, UpButton, TelegramWidget, Title
 } from '../../components';
+import { TITLE_TAGS } from '../../constants';
 
 const HomePage: FunctionalComponent = () => {
     const [isActive, setIsActive] = useState(false);
@@ -24,11 +25,18 @@ const HomePage: FunctionalComponent = () => {
     }
 
     return (
-        <div>
+        <Fragment>
+            <section>
+                <Title tag={TITLE_TAGS.H1} theme={TITLE_TAGS.H1}>
+                    Yield Farming
+                    <br />
+                    Development Services
+                </Title>
+            </section>
             <TelegramWidget />
             {isActive ? <UpButton /> : null}
             <ContactUs title='Get Live Technical Demo' />
-        </div>
+        </Fragment>
     );
 };
 

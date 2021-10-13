@@ -8,3 +8,4 @@ export { default as PrivacyPolicy } from './privacy-policy';
 export { default as TelegramWidget } from './telegram-widget';
 export { default as Terms } from './terms';
 export { default as UpButton } from './up-button';
+export { default as Title } from './UI/Title';
