@@ -1,0 +1,46 @@
+{
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": 2015,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "project": "./tsconfig.json"
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended",
+        "airbnb",
+        "airbnb-typescript"
+    ],
+    "env": {
+        "es6": true,
+        "browser": true
+    },
+    "rules": {
+        // Eslint
+        "object-curly-newline": [
+            "error",
+            { "multiline": true, "minProperties": 2 }
+        ],
+        "indent": "off",
+        "function-call-argument-newline": ["error", "always"],
+        "function-paren-newline": ["error", { "minItems": 2 }],
+        "jsx-quotes": ["error", "prefer-single"],
+        "comma-dangle": "off",
+        "linebreak-style": "off",
+        "no-unused-vars": "off",
+        // Eslint typescript
+        "@typescript-eslint/comma-dangle": ["error", "never"],
+        "@typescript-eslint/indent": ["error", 4],
+        // React
+        "react/jsx-indent": "off",
+        "react/jsx-indent-props": [2, 4],
+        "react/jsx-first-prop-new-line": [2, "multiline"],
+        "react/jsx-fragments": ["error", "element"],
+        "react/prop-types": "off",
+        "react/require-default-props": "off",
+        "react/react-in-jsx-scope": "off"
+    }
+}
