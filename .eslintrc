@@ -37,10 +37,16 @@
         // React
         "react/jsx-indent": "off",
         "react/jsx-indent-props": [2, 4],
-        "react/jsx-first-prop-new-line": [2, "multiline"],
         "react/jsx-fragments": ["error", "element"],
         "react/prop-types": "off",
         "react/require-default-props": "off",
-        "react/react-in-jsx-scope": "off"
+        "react/react-in-jsx-scope": "off",
+        "react/jsx-first-prop-new-line": [1, "multiline"],
+        "react/jsx-max-props-per-line": [
+            1,
+            {
+                "maximum": 1
+            }
+        ]
     }
 }
