@@ -1,0 +1,57 @@
+@import '../../../style/mixins/mixins';
+
+.title {
+    font-family: var(--font-family-norms);
+    margin: 0;
+    padding: 0;
+}
+
+.title_theme_h1 {
+    font-size: var(--font-size-h1);
+    line-height: var(--font-size-h1);
+    letter-spacing: 1px;
+    font-weight: 800;
+
+    @include b('tablet') {
+        font-size: var(--font-size-h2);
+        line-height: var(--font-size-h2);
+    }
+
+    @include b('mobile') {
+        font-size: var(--font-size-h1-mobile);
+        line-height: var(--font-size-h1-mobile);
+    }
+}
+
+.title_theme_h2 {
+    font-size: var(--font-size-h2);
+    line-height: var(--font-size-h1);
+    font-weight: 800;
+
+    @include b('mobile') {
+        font-size: var(--font-size-h1-mobile);
+        line-height: var(--font-size-h1-mobile);
+    }
+}
+
+.title_theme_h3 {
+    font-size: var(--font-size-h3);
+    line-height: var(--font-size-h1);
+    font-weight: 800;
+}
+
+.title_align_center {
+    text-align: center;
+}
+
+.title_align_left {
+    text-align: left;
+}
+
+.text_align_right {
+    text-align: right;
+}
+
+.title_transform_uppercase {
+    text-transform: uppercase;
+}

@@ -8,21 +8,26 @@ import {
 import { getCurrentUrl } from 'preact-router';
 import style from './style.scss';
 
-import BlockHeader from '../block-header';
-
 import useGoogleReCaptchaV2 from '../../hooks/useGoogleReCaptcha';
 import { RECAPTCHA_KEY } from '../../definitions';
-import { ContactUsProps } from '../../types';
+import SocialInput from '../input/socialInput';
+import { Title } from '..';
+import {
+    TEXT_ALIGNS, TITLE_TAGS
+} from '../../constants';
 
-const ContactUs: FunctionalComponent<ContactUsProps> = ({
-    title,
-    subtitle
-}) => {
+interface ContactUsProps {
+    title: string;
+    subtitle?: string;
+}
+
+const ContactUs: FunctionalComponent<ContactUsProps> = () => {
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [isCompleted, setIsCompleted] = useState(false);
     const [name, setName] = useState('');
     const [contact, setContact] = useState('');
     const [idea, setIdea] = useState('');
+    const [social, setSocial] = useState('E-mail');
     const [token, setToken] = useState('');
     const [isImgAvailable, setIsImgAvailable] = useState(false);
 
@@ -44,7 +49,8 @@ const ContactUs: FunctionalComponent<ContactUsProps> = ({
     const formData = JSON.stringify({
         name,
         socialNetwork: contact,
-        message: idea
+        message: idea,
+        social
     });
 
     const headers = { 'Content-Type': 'application/json' };
@@ -106,10 +112,6 @@ const ContactUs: FunctionalComponent<ContactUsProps> = ({
         setName(e.target.value);
     };
 
-    const onSetContact = (e: any): void => {
-        setContact(e.target.value);
-    };
-
     const onSetIdea = (e: any): void => {
         setIdea(e.target.value);
     };
@@ -119,7 +121,14 @@ const ContactUs: FunctionalComponent<ContactUsProps> = ({
             className={`${style['contact-us']} ${style.container}`}
             id='contact-us'
         >
-            <BlockHeader style={style} primary={title} secondary={subtitle} />
+            <Title
+                tag={TITLE_TAGS.H2}
+                theme={TITLE_TAGS.H3}
+                align={TEXT_ALIGNS.CENTER}
+                isUppercase
+            >
+                Get Live Technical Demo
+            </Title>
             <form
                 name='contact-us-form'
                 onSubmit={(): Promise<void> => onSubmit(event)}
@@ -130,7 +139,11 @@ const ContactUs: FunctionalComponent<ContactUsProps> = ({
                     id='g-recaptcha-response'
                     name='g-recaptcha-response'
                 />
-                <input type='hidden' name='action' value='validate_captcha' />
+                <input
+                    type='hidden'
+                    name='action'
+                    value='validate_captcha'
+                />
                 <input
                     className={style['contact-us__form__input']}
                     type='text'
@@ -138,19 +151,22 @@ const ContactUs: FunctionalComponent<ContactUsProps> = ({
                     value={name}
                     onInput={(): void => onSetName(event)}
                 />
-                <label htmlFor='' className={style['visually-hidden']}>
+                <label
+                    htmlFor=''
+                    className={style['visually-hidden']}
+                >
                     Enter your name
                 </label>
-                <input
-                    className={style['contact-us__form__input']}
-                    type='text'
+                <SocialInput
                     placeholder='Your contact (telegram, email, ...)'
+                    customStyleBlock={style.socialsBlock}
+                    customStyleInput={style['contact-us__form__input']}
+                    customStyleSocials={style.socialsType}
                     value={contact}
-                    onInput={(): void => onSetContact(event)}
+                    type='text'
+                    onChangeInput={setContact}
+                    onChangeSocial={setSocial}
                 />
-                <label htmlFor='' className={style['visually-hidden']}>
-                    Enter how we can contact with you, like telegram, email, etc
-                </label>
                 <textarea
                     className={`${style['contact-us__form__input']} ${style['contact-us__form__input-textarea']}`}
                     rows={1}
@@ -158,13 +174,19 @@ const ContactUs: FunctionalComponent<ContactUsProps> = ({
                     value={idea}
                     onInput={(): void => onSetIdea(event)}
                 />
-                <label htmlFor='' className={style['visually-hidden']}>
+                <label
+                    htmlFor=''
+                    className={style['visually-hidden']}
+                >
                     Briefly describe your project or idea
                 </label>
                 <p className={style.terms}>
                     By using the service, you accept the
                     {' '}
-                    <a href='/terms-of-service' target='_top'>
+                    <a
+                        href='/terms-of-service'
+                        target='_top'
+                    >
                         Terms of Service
                     </a>
                 </p>

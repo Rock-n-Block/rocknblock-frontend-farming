@@ -1,0 +1,43 @@
+@import '../../style/mixins/mixins';
+
+.card {
+    border-radius: 20px;
+    background: linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.1) 0%,
+            rgba(255, 255, 255, 0) 100%
+        ),
+        #2c2c33;
+    height: 350px;
+    position: relative;
+    top: 0;
+    transition: top .15s ease-in-out;
+
+    &:hover {
+        top: -5px;
+    }
+
+    @include b('mobile') {
+        height: 300px;
+    }
+}
+
+.card__logotypeWrapper {
+    display: flex;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+}
+
+.card__logotype {
+    display: block;
+}
+
+.card__logotypeName {
+    display: block;
+    margin: 42px auto 0;
+
+    @include b('mobile') {
+        margin-top: 10px;
+    }
+}

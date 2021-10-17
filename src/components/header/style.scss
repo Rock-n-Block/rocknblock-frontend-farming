@@ -2,10 +2,11 @@
 @import '../../style/index';
 
 header {
-    position: sticky;
+    position: fixed;
+    width: 100%;
     top: 0;
     left: 0;
-    z-index: 20;
+    z-index: 99;
     background-color: #0f0f0f;
     transition: 0.5s ease;
 }

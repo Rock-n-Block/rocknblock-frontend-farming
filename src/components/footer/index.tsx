@@ -57,13 +57,22 @@ const Footer: FunctionalComponent = () => {
                         <p className={style['bottom__copyright-desktop']}>
                             © Copyright Rock’n’Block 2021
                         </p>
-                        <a href='/privacy-policy' target='_top'>
+                        <a
+                            href='/privacy-policy'
+                            target='_top'
+                        >
                             Privacy Policy
                         </a>
-                        <a href='/terms-of-service' target='_top'>
+                        <a
+                            href='/terms-of-service'
+                            target='_top'
+                        >
                             Terms of Service
                         </a>
-                        <a href='/company' target='_top'>
+                        <a
+                            href='/company'
+                            target='_top'
+                        >
                             Company
                         </a>
                     </div>
@@ -71,6 +80,9 @@ const Footer: FunctionalComponent = () => {
                         © Copyright Rock’n’Block 2021
                     </p>
                 </div>
+            </div>
+            <div className={style.ellipseContainer}>
+                <div className={style.ellipse} />
             </div>
         </footer>
     );

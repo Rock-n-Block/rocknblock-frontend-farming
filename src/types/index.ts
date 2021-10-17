@@ -96,3 +96,26 @@ export interface WhyUsCardsI {
     units: string;
     text: string;
 }
+
+export interface PlatformsI {
+    logotype: string;
+    logotypeName: string;
+    name: string;
+}
+
+export interface BenefitsI {
+    icon: string;
+    title: string;
+    description: string;
+}
+
+export interface FaqI {
+    title: string;
+    description: string;
+}
+
+export interface SiteI {
+    image: string;
+    title: string;
+    link: string;
+}

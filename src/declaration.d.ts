@@ -3,4 +3,9 @@ declare module '*.scss' {
     export default mapping;
 }
 
+declare module '*.png' {
+    const value: any;
+    export default value;
+}
+
 declare module 'preact-google-recaptcha' {}

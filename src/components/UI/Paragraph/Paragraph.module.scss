@@ -1,0 +1,27 @@
+@import '../../../style/mixins/mixins';
+
+.paragraph {
+    color: inherit;
+    font-size: var(--font-size-paragraph);
+    line-height: var(--line-height-paragraph);
+    font-family: var(--font-family-commons);
+    font-weight: 400;
+    letter-spacing: -0.3px;
+
+    @include b('tablet') {
+        font-size: var(--font-size-paragraph-mobile);
+        line-height: 26px;
+    }
+}
+
+.paragraph_align_center {
+    text-align: center;
+}
+
+.paragraph_align_left {
+    text-align: left;
+}
+
+.paragraph_align_right {
+    text-align: right;
+}

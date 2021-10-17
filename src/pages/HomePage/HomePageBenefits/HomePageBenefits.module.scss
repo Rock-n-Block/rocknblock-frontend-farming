@@ -1,0 +1,121 @@
+@import '../../../style/mixins/mixins';
+
+.sectionBenefits {
+    position: relative;
+    z-index: 3;
+    margin-top: 165px;
+}
+
+.sectionBenefits__benefitsWrapper {
+    list-style: none;
+    padding: 10px 0 0;
+    margin: 120px 0 0 -10px;
+    display: flex;
+    width: calc(var(--width-m) - 10px);
+    overflow-x: auto;
+
+    @include b('desktop') {
+        width: 100%;
+    }
+
+    @include b('mobile') {
+        margin-top: 10px;
+    }
+}
+
+.sectionBenefits__benefit {
+    margin: 0 0 0 35px;
+    padding: 0;
+    flex-basis: 340px;
+    flex-grow: 0;
+    flex-shrink: 0;
+
+    &:first-child {
+        margin-left: 15px;
+    }
+
+    @include b('mobile') {
+        flex-basis: 320px;
+        margin-left: 15px;
+    }
+}
+
+.sectionBenefits__title {
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.sectionBenefits__question {
+    padding: 30px 20px;
+    background: linear-gradient(30.15deg, #000000 14.13%, #272525 79.31%);
+    border-radius: 0px 24px 24px 0px;
+    max-width: 355px;
+    position: relative;
+    margin-left: 8px;
+    margin-top: 60px;
+    z-index: 2;
+
+    &::before {
+        content: '';
+        width: 8px;
+        height: calc(100% - 20px);
+        position: absolute;
+        top: 10px;
+        left: -8px;
+        background-color: var(--color-alizarin-crimson);
+        border-radius: 4px 0px 0px 4px;
+    }
+
+    @include b('mobile') {
+        margin-top: -25px;
+        z-index: 1;
+    }
+}
+
+.sectionBenefits__questionTitle {
+    text-transform: uppercase;
+    color: var(--color-alizarin-crimson);
+    margin-bottom: 15px;
+    line-height: 22px;
+}
+
+.sectionBenefits__paragraph {
+    font-size: 16px;
+    line-height: 30px;
+    max-width: 500px;
+    position: relative;
+    z-index: 2;
+}
+
+.sectionBenefits__paragraph_indent_bottom {
+    margin-bottom: 30px;
+}
+
+.sectionBenefits__imageWrapper {
+    overflow: hidden;
+    position: absolute;
+    top: -65px;
+    width: 100%;
+    display: flex;
+    left: 0;
+    justify-content: center;
+    z-index: 1;
+
+    @include b('mobile') {
+        top: 5px;
+        position: relative;
+        z-index: 2;
+    }
+}
+
+.sectionBenefits__image {
+    display: block;
+    max-width: none;
+    margin-left: 650px;
+
+    @include b('mobile') {
+        margin-left: 0;
+        width: 470px;
+    }
+}

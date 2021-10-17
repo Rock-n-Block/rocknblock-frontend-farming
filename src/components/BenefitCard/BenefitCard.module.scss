@@ -1,0 +1,34 @@
+.benefit {
+    background: linear-gradient(30.15deg, #000000 14.13%, #272525 79.31%);
+    border-radius: 24px;
+    min-height: 410px;
+    box-sizing: border-box;
+    padding-left: 28px;
+    padding-right: 28px;
+}
+
+.benefit__imageWrapper {
+    display: flex;
+    height: 150px;
+    align-items: center;
+}
+
+.benefit__image {
+    display: block;
+}
+
+.benefit__title {
+    font-family: var(--font-family-norms);
+    font-weight: 800;
+    font-size: var(--font-size-paragraph);
+    text-transform: uppercase;
+    margin-top: 13px;
+}
+
+.benefit__description {
+    font-family: var(--font-family-commons);
+    font-size: var(--font-size-paragraph-s);
+    margin-top: 20px;
+    line-height: 21px;
+    opacity: 0.5;
+}

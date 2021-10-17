@@ -1,0 +1,45 @@
+@import '../../style/mixins/mixins';
+
+.faq {
+    background: linear-gradient(30.15deg, #000000 14.13%, #272525 79.31%);
+    border-radius: 24px;
+    padding: 25px;
+}
+
+.faq__title {
+    font-family: var(--font-family-norms);
+    display: block;
+    padding: 10px 0 10px 25px;
+    margin: 0;
+    position: relative;
+    font-size: 26px;
+    text-transform: uppercase;
+
+    &::before {
+        content: '';
+        width: 8px;
+        height: 100%;
+        background-color: var(--color-alizarin-crimson);
+        position: absolute;
+        top: 0;
+        left: 0;
+        -webkit-border-top-left-radius: 8px;
+        -webkit-border-bottom-left-radius: 8px;
+        -moz-border-radius-topleft: 8px;
+        -moz-border-radius-bottomleft: 8px;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+    }
+
+    @include b('mobile') {
+        font-size: 22px;
+    }
+}
+
+.faq__description {
+    font-family: var(--font-family-commons);
+    opacity: 0.5;
+    margin-top: 20px;
+    padding: 0;
+    line-height: 30px;
+}

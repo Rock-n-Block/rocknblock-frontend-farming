@@ -1,0 +1,74 @@
+@import '../../../style/mixins/mixins';
+
+.sectionWhatIs {
+    padding-top: 50px;
+    position: relative;
+    z-index: 1;
+    padding-bottom: 345px;
+
+    @include b('mobile') {
+        padding-bottom: 300px;
+    }
+}
+
+.sectionWhatIs__title {
+    position: relative;
+    z-index: 3;
+}
+
+.sectionWhatIs__description {
+    position: relative;
+    z-index: 3;
+    margin-top: 16px;
+}
+
+.sectionWhatIs__imageRoadWrapper {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    height: 425px;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.sectionWhatIs__imageRoad {
+    display: block;
+    max-width: none;
+    margin-left: 155px;
+
+    @include b('mobile') {
+        margin-left: 825px;
+    }
+}
+
+.sectionWhatIs__imageRaysWrapper {
+    width: 100%;
+    height: 925px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: -165px;
+    left: 0;
+    z-index: 1;
+}
+
+.sectionWhatIs__imageRays {
+    opacity: 1;
+    max-width: none;
+    display: block;
+    animation: opacityImage 3s linear infinite;
+}
+
+@keyframes opacityImage {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}

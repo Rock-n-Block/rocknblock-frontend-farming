@@ -24,10 +24,6 @@ body {
     cursor: default;
     overflow-x: hidden;
     color: white;
-
-    @include b('tablet') {
-        padding: 0 15px;
-    }
 }
 
 img {

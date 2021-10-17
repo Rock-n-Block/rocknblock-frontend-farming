@@ -1,0 +1,95 @@
+@import '../../../style/mixins/mixins';
+
+.sectionFarming {
+    position: relative;
+    z-index: 2;
+    padding-top: 170px;
+    min-height: 1235px;
+    overflow: hidden;
+
+    @include b('tablet') {
+        padding-top: 110px;
+        min-height: 900px;
+    }
+
+    @include b('mobile') {
+        padding-top: 100px;
+        min-height: 770px;
+    }
+
+    &::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        bottom: 10%;
+        left: 0;
+        z-index: 1;
+        background: rgb(0, 0, 0);
+        background: -moz-linear-gradient(
+            8deg,
+            rgba(0, 0, 0, 1) 25%,
+            rgba(152, 34, 34, 1) 42%,
+            rgba(0, 0, 0, 1) 65%
+        );
+        background: -webkit-linear-gradient(
+            8deg,
+            rgba(0, 0, 0, 1) 25%,
+            rgba(152, 34, 34, 1) 42%,
+            rgba(0, 0, 0, 1) 65%
+        );
+        background: linear-gradient(
+            8deg,
+            rgba(0, 0, 0, 1) 25%,
+            rgba(152, 34, 34, 1) 42%,
+            rgba(0, 0, 0, 1) 65%
+        );
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
+    }
+}
+
+.sectionFarming__title {
+    position: relative;
+    z-index: 3;
+}
+
+.sectionFarming__imageWrapper {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 2;
+
+    @include b('mobile') {
+        top: 130px;
+    }
+}
+
+.sectionFarming__image {
+    display: block;
+    max-width: none;
+    position: relative;
+    top: -20px;
+    animation: floatImage 3s linear infinite;
+
+    @include b('tablet') {
+        width: 1350px;
+    }
+
+    @include b('mobile') {
+        width: 930px;
+    }
+}
+
+@keyframes floatImage {
+    0%,
+    100% {
+        top: -20px;
+    }
+    50% {
+        top: 20px;
+    }
+}

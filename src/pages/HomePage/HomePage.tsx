@@ -4,9 +4,16 @@ import {
 import { useState } from 'preact/hooks';
 
 import {
-    ContactUs, UpButton, TelegramWidget, Title
+    ContactUs, UpButton, TelegramWidget
 } from '../../components';
-import { TITLE_TAGS } from '../../constants';
+import HomePageBenefits from './HomePageBenefits/HomePageBenefits';
+import HomePageBuild from './HomePageBuild/HomePageBuild';
+import HomePageFaq from './HomePageFaq/HomePageFaq';
+import HomePageFarming from './HomePageFarming/HomePageFarming';
+import HomePageRole from './HomePageRole/HomePageRole';
+import HomePageSites from './HomePageSites/HomePageSites';
+import HomePageWhatIs from './HomePageWhatIs/HomePageWhatIs';
+import HomePageWork from './HomePageWork/HomePageWork';
 
 const HomePage: FunctionalComponent = () => {
     const [isActive, setIsActive] = useState(false);
@@ -26,13 +33,15 @@ const HomePage: FunctionalComponent = () => {
 
     return (
         <Fragment>
-            <section>
-                <Title tag={TITLE_TAGS.H1} theme={TITLE_TAGS.H1}>
-                    Yield Farming
-                    <br />
-                    Development Services
-                </Title>
-            </section>
+            <HomePageFarming />
+            <HomePageWhatIs />
+            <HomePageRole />
+            <HomePageWork />
+            <HomePageBenefits />
+            <HomePageBuild />
+            <HomePageFaq />
+            <HomePageSites />
+
             <TelegramWidget />
             {isActive ? <UpButton /> : null}
             <ContactUs title='Get Live Technical Demo' />
