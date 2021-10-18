@@ -1,6 +1,7 @@
 import {
     FunctionComponent, h
 } from 'preact';
+import { Link } from 'preact-router';
 import {
     ContentWrapper,
     Paragraph,
@@ -64,7 +65,7 @@ const HomePageBuild: FunctionComponent = () => (
             Farming platform.
         </Paragraph>
 
-        <a
+        <Link
             className={styles.sectionBuild__link}
             href='#contact-us'
         >
@@ -75,7 +76,7 @@ const HomePageBuild: FunctionComponent = () => (
                     alt='arrow'
                 />
             </i>
-        </a>
+        </Link>
     </ContentWrapper>
 );
 

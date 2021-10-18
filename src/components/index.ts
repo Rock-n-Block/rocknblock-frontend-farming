@@ -13,3 +13,4 @@ export { default as TextSelection } from './UI/TextSelection/TextSelection';
 export { default as ContentWrapper } from './ContentWrapper/ContentWrapper';
 export { default as Paragraph } from './UI/Paragraph/Paragraph';
 export { default as SiteCard } from './SiteCard/SiteCard';
+export { default as PopupPreloader } from './PopupPreloader/PopupPreloader';

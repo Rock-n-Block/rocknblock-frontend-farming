@@ -1,0 +1,40 @@
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.preloader__iconWrapper {
+    width: 100px;
+    height: 100px;
+    background-color: var(--color-alizarin-crimson);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.preloader__icon {
+    width: 40px;
+    height: auto;
+    fill: var(--color-white);
+    animation: imageFloating 1s linear infinite;
+    position: relative;
+    top: -5px;
+}
+
+@keyframes imageFloating {
+    0%,
+    100% {
+        top: -5px;
+    }
+    50% {
+        top: 5px;
+    }
+}
