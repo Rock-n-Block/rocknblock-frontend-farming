@@ -9,26 +9,26 @@ export const otherSites: SiteI[] = [
     {
         image: image1,
         title: 'NFT Marketplace',
-        link: 'http://nftmarketplace.rocknblock.io/'
+        link: 'https://nftmarketplace.rocknblock.io/'
     },
     {
         image: image2,
         title: 'Farming',
-        link: ''
+        link: 'https://farming.rocknblock.io'
     },
     {
         image: image3,
         title: '10k nft generator',
-        link: 'http://10knft.rocknblock.io/'
+        link: 'https://10knft.rocknblock.io/'
     },
     {
         image: image4,
         title: 'Crowdsale',
-        link: 'http://crowdsale.rocknblock.io/'
+        link: 'https://crowdsale.rocknblock.io/'
     },
     {
         image: image5,
         title: 'Vesting',
-        link: ''
+        link: 'https://vesting.rocknblock.io'
     }
 ];

@@ -3,7 +3,7 @@ import { FooterLinksI } from '../../types';
 export const links: FooterLinksI[] = [
     {
         name: 'tw',
-        href: 'https://twitter.com/RocknBlock2',
+        href: 'https://twitter.com/rocknblockdev',
         fullName: 'Twitter'
     },
     {
