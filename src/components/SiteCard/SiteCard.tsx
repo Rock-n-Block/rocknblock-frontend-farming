@@ -1,7 +1,6 @@
 import {
     FunctionComponent, h
 } from 'preact';
-import { Link } from 'preact-router';
 import { SiteI } from '../../types';
 import styles from './SiteCard.module.scss';
 import iconArrow from '../../assets/img/farming/icon-arrow.png';
@@ -21,7 +20,7 @@ const SiteCard: FunctionComponent<SiteI> = (props) => {
                 />
             </figure>
             <h4 className={styles.site__title}>{title}</h4>
-            <Link
+            <a
                 className={styles.site__link}
                 href={link}
                 target='_blank'
@@ -34,7 +33,7 @@ const SiteCard: FunctionComponent<SiteI> = (props) => {
                         alt='arrow'
                     />
                 </i>
-            </Link>
+            </a>
         </article>
     );
 };
