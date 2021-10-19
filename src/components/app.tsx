@@ -5,9 +5,7 @@ import { Router } from 'preact-router';
 
 import * as smoothscroll from 'smoothscroll-polyfill';
 
-import {
-    useEffect, useState
-} from 'preact/hooks';
+import { useState } from 'preact/hooks';
 import Header from './header';
 import Footer from './footer';
 import HomePage from '../pages/HomePage/HomePage';
@@ -21,21 +19,14 @@ if (typeof window !== 'undefined') smoothscroll.polyfill();
 const App: FunctionalComponent = () => {
     const [isLoading, setIsLoading] = useState(true);
 
-    useEffect(
-        () => {
-            setTimeout(
-                () => {
-                    setIsLoading(!isLoading);
-                },
-                2000
-            );
-        },
-        []
-    );
-
     return (
         <div id='preact_root'>
-            {isLoading && <PopupPreloader />}
+            {isLoading && (
+                <PopupPreloader
+                    isLoading={isLoading}
+                    setIsLoading={setIsLoading}
+                />
+            )}
             <Header />
             <Router>
                 <HomePage path='/' />
