@@ -54,6 +54,10 @@
     top: -165px;
     left: 0;
     z-index: 1;
+
+    @include b('mobile') {
+        top: -50px;
+    }
 }
 
 .sectionWhatIs__imageRays {
@@ -61,6 +65,11 @@
     max-width: none;
     display: block;
     animation: opacityImage 3s linear infinite;
+
+    @include b('mobile') {
+        width: 550px;
+        height: 500px;
+    }
 }
 
 @keyframes opacityImage {

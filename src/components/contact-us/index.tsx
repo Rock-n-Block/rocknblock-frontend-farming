@@ -158,7 +158,7 @@ const ContactUs: FunctionalComponent<ContactUsProps> = () => {
                     Enter your name
                 </label>
                 <SocialInput
-                    placeholder='Your contact (telegram, email, ...)'
+                    placeholder='Your contact'
                     customStyleBlock={style.socialsBlock}
                     customStyleInput={style['contact-us__form__input']}
                     customStyleSocials={style.socialsType}
