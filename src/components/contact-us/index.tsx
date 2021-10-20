@@ -47,7 +47,7 @@ const ContactUs: FunctionalComponent<ContactUsProps> = () => {
     } = useGoogleReCaptchaV2({ siteKey: RECAPTCHA_KEY });
 
     const formData = JSON.stringify({
-        name, contact, message: idea, social
+        name, contact, message: idea, social, landing: 'farming'
     });
 
     const headers = { 'Content-Type': 'application/json' };
