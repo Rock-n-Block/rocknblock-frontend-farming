@@ -6,4 +6,14 @@
     width: 60px;
     border-radius: 50%;
     cursor: pointer;
+    display: block;
+    transition: transform 0.15s ease-in;
+
+    &:hover {
+        -moz-transform: rotate(15deg);
+        -webkit-transform: rotate(15deg);
+        -o-transform: rotate(15deg);
+        -ms-transform: rotate(15deg);
+        transform: rotate(15deg);
+    }
 }
