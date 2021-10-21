@@ -4,6 +4,7 @@ import {
 import {
     useEffect, useState
 } from 'preact/hooks';
+import { ROUTERS } from '../../constants';
 import style from './style.scss';
 
 const Header: FunctionalComponent = () => {
@@ -45,7 +46,10 @@ const Header: FunctionalComponent = () => {
             <div className={style.container}>
                 <nav className={style['main-nav']}>
                     <section className={`${style['main-nav__mobile']}`}>
-                        <a href='/' className={style.logo}>
+                        <a
+                            href={ROUTERS.ROCKNBLOCK}
+                            className={style.logo}
+                        >
                             <img
                                 src='../../assets/img/icons/logo.svg'
                                 alt="Rock'n'Block logo"
