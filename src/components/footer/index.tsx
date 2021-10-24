@@ -23,7 +23,7 @@ const Footer: FunctionalComponent = () => {
     );
 
     return (
-        <footer>
+        <footer className={style.footerWrapper}>
             <div className={`${style.container} ${style.footer}`}>
                 {isIconsAvailable && (
                     <nav className={style['social-links']}>
