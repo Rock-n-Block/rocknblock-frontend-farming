@@ -8,7 +8,6 @@ header {
     left: 0;
     z-index: 99;
     background-color: #0f0f0f;
-    transition: 0.5s ease;
 }
 
 .justify-end {
@@ -21,6 +20,10 @@ header {
 
 .bg-transparent {
     background-color: transparent;
+}
+
+.bg-show {
+    background-color: black !important;
 }
 
 .main-nav {
